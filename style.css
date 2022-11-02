@@ -1,122 +1,133 @@
-/* a minimalist set of CSS resets */
+/* Banner */
 
-/* default to border-box */
-html {
-  box-sizing: border-box;
-  font-size: 16px;
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
-/* adjust typography defaults */
-body {
-  margin: 0;
-  font-family: sans-serif;
-}
-
-/* images and videos max out at full width */
-img,
-video {
-  height: auto;
-  max-width: 100%;
-}
-
-.content-container {
-  position: relative;
-}
-
-.content-container i {
-  font-size: 24px;
+.banner::before {
+  background: linear-gradient(to bottom, #d9a918, transparent);
+  content: "";
+  left: 0;
   position: absolute;
-  color: white; 
-  display: inline-block;
-  margin-top: 15px; 
-  cursor: pointer; 
-}
-
-
-.left {
-  left: 10px;
-}
-
-.left:hover{
-  animation-name: floating;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
-  color: gold; 
-}
-
-@keyframes floating {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(5px);
-  }
-  100%  {
-    transform: translateY(-0px);
-  }
-}
-
-.right {
-  right: 10px;
-}
-
-.right:hover{
-  animation-name: floating;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
-}
-
-@keyframes floating {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(5px);
-  }
-  100%  {
-    transform: translateY(-0px);
-  }
-}
-
-h1 {
-  text-align: center; 
-}
-
-/* every element w/ this class takes full-screen */
-.full-screen {
-  border: 1px solid grey; 
+  top: 85px;
   width: 100%;
-  height: calc(100vh - 20px);
+  height: 400px;
+  z-index: -1;
+}
+.banner {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
+@media screen and (min-width: 800px) {
+  .banner {
+    flex-direction: row;
+  }
+}
+.banner .left {
+  margin: 40px 0;
+}
+.banner .left > * {
+  margin: 20px 0 0 0;
+}
+.banner .right {
+  margin: 20px;
+  display: flex;
+}
+@media screen and (min-width: 800px) {
+  .banner .right,
+  .banner .left {
+    width: 50%;
+  }
+}
+.banner .right img {
+  max-width: min(300px, 100%);
+  margin: auto;
+  display: block;
+}
+
+/* Cards */
+.cards {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 12px;
+  justify-content: center;
+}
+.card {
+  background-color: white;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.22);
+  padding: 40px 40px 90px 40px;
+  margin: 20px;
+  position: relative;
+  border-top: 10px solid #214da6;
+  width: 100%;
+}
+@media screen and (min-width: 800px) {
+  .card {
+    width: calc(50% - 40px);
+  }
+}
+.card h2 {
+  margin-top: 0;
+}
+.card-button {
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 2px solid #bf2121;
+  text-decoration: none;
+  color: #bf2121;
+  transition: all 0.2s;
+  display: inline-block;
   position: absolute;
-  top:0;
-  left:0;
-  padding-top: 40px; 
+  bottom: 40px;
+  right: 40px;
+}
+.card-button:focus,
+.card-button:hover {
+  background-color: #bf2121;
+  color: white;
 }
 
-.full-screen p {
-  padding: 10px;
+.contact form {
+  background-color: #d9a918;
+  padding: 40px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.22);
 }
-
-.hidden {
-  visibility: hidden;
+.contact form .right {
+  margin-top: 50px;
 }
-
-
-
-#slide-1 {
-  background: #94FBAB;
+@media screen and (min-width: 800px) {
+  .contact form {
+    flex-direction: row;
+  }
+  .contact form .left {
+    width: 50%;
+    padding-right: 40px;
+  }
+  .contact form .right {
+    padding-left: 40px;
+    margin-top: 0;
+    width: 50%;
+    border-left: 2px solid #bf2121;
+    display: flex;
+    align-items: center;
+  }
 }
-
-#slide-2 {
-  background: #B8E1FF;
+.contact form h2 {
+  margin: 0;
 }
-
-#slide-3 {
-  background: #fb8500;
+.contact form label {
+  display: block;
+  margin-bottom: 10px;
+}
+.contact form label span {
+  display: block;
+}
+.contact form input,
+.contact form textarea {
+  width: 100%;
+}
+.contact form textarea {
+  resize: vertical;
 }
