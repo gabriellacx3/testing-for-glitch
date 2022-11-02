@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+
+    <title>Preparing for Halloween</title>
+
+    <!-- import bootstrap icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
+    <!-- this is the start of content -->
+    <h1>Preparing for Halloween</h1>
+    <div class="content-container">
+      
+    <!-- three placeholder sections of content -->
+      <section class="full-screen" id="slide-1">
+        <p>First Piece of Content.</p>
+      </section>
+
+      <section class="full-screen hidden" id="slide-2">
+        <p>Second Piece of Content.</p>
+      </section>
+
+      <section class="full-screen hidden" id="slide-3">
+        <p>Third Piece of Content.</p>
+      </section>
+
+      <i class="bi bi-arrow-left-square left" onclick="returnContent()"></i>
+      <i class="bi bi-arrow-right-square right" onclick="advanceContent()"></i>
+    </div>
+  </body>
+</html>
