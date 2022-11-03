@@ -28,75 +28,40 @@ video {
 }
 
 .content-container i {
-  font-size: 24px;
+  font-size: 28px;
   position: absolute;
-  color: white; 
+  color: black;
   display: inline-block;
-  margin-top: 15px; 
-  cursor: pointer; 
+  margin-top: 20px;
+  cursor: pointer;
 }
 
+i:hover {
+  /* add your own hover effect */
+}
 
 .left {
-  left: 10px;
-}
-
-.left:hover{
-  animation-name: floating;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
-  color: gold; 
-}
-
-@keyframes floating {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(5px);
-  }
-  100%  {
-    transform: translateY(-0px);
-  }
+  left: 10px
 }
 
 .right {
-  right: 10px;
-}
-
-.right:hover{
-  animation-name: floating;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out;
-}
-
-@keyframes floating {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(5px);
-  }
-  100%  {
-    transform: translateY(-0px);
-  }
+  right: 10px
 }
 
 h1 {
-  text-align: center; 
+  text-align: center;
 }
 
-/* every element w/ this class takes full-screen */
+/* every element with this class takes up the full 
+width and height of the screen */
 .full-screen {
-  border: 1px solid grey; 
+  border: 1px solid black;
   width: 100%;
-  height: calc(100vh - 20px);
+  height: 100vh;
   position: absolute;
-  top:0;
-  left:0;
-  padding-top: 40px; 
+  top: 0;
+  left: 0;
+  padding-top: 40px;
 }
 
 .full-screen p {
@@ -107,16 +72,234 @@ h1 {
   visibility: hidden;
 }
 
-
-
 #slide-1 {
-  background: #94FBAB;
+  background: #A9FFF7;
 }
 
 #slide-2 {
-  background: #B8E1FF;
+  background:#94FBAB;
 }
 
 #slide-3 {
-  background: #fb8500;
+  background:#B8E1FF;
+}
+
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background: #066acd;
+}
+.container{
+    width: 40%;
+    top: 50%;
+    left: 50%;
+    background: white;
+    border-radius: 10px;
+    min-width: 450px;
+    position: absolute;
+    min-height: 100px;
+    transform: translate(-50%,-50%);
+}
+
+#newtask{
+    position: relative;
+    padding: 30px 20px;
+}
+
+#newtask input{
+    width: 75%;
+    height: 45px;
+    padding: 12px;
+    color: #111111;
+    font-weight: 500;
+    position: relative;
+    border-radius: 5px;
+    font-family: 'Poppins',sans-serif;
+    font-size: 15px;
+    border: 2px solid #d1d3d4;
+}
+
+#newtask input:focus{
+    outline: none;
+    border-color: #0d75ec;
+}
+
+#newtask button{
+    position: relative;
+    float: right;
+    font-weight: 500;
+    font-size: 16px;
+    background-color: #0d75ec;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    outline: none;
+    width: 20%;
+    height: 45px;
+    border-radius: 5px;
+    font-family: 'Poppins',sans-serif;
+}
+#tasks{
+    border-radius: 10px;
+    width: 100%;
+    position: relative;
+    background-color: #ffffff;
+    padding: 30px 20px;
+    margin-top: 10px;
+}
+
+.task{
+    border-radius: 5px;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #939697;
+    cursor: pointer;
+    background-color: #c5e1e6;
+    height: 50px;
+    margin-bottom: 8px;
+    padding: 5px 10px;
+    display: flex;
+}
+
+.task span{
+    font-family: 'Poppins',sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.task button{
+    background-color:#14110F ;
+    color: #D9C5B2;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    height: 100%;
+    width: 40px;
+    border-radius: 5px;
+}
+
+button{
+    width:200px;
+    height:70px;
+    background: linear-gradient(to left top, #0C0504 50%, #0C0504 50%);
+    border-style: none;
+    color:#FFF8DC;
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-family: "Raleway", cursive;
+    font-weight: 600;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    padding: 0px;
+    overflow: hidden;
+    transition: all .5s;
+    box-shadow: 0px 1px 2px rgba(0,0,0,.2);
+}
+button span{
+    position: absolute;
+    display: block;
+}
+button span:nth-child(1){
+    height: 3px;
+    width:200px;
+    top:0px;
+    left:-200px;
+    background: linear-gradient(to right, rgb(0, 139, 139), #008B8B);
+    border-top-right-radius: 1px;
+    border-bottom-right-radius: 1px;
+    animation: span1 2s linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes span1{
+    0%{
+        left:-200px
+    }
+    100%{
+        left:200px;
+    }
+}
+button span:nth-child(2){
+    height: 70px;
+    width: 3px;
+    top:-70px;
+    right:0px;
+    background: linear-gradient(to bottom, rgb(184, 134, 11), #B8860B);
+    border-bottom-left-radius: 1px;
+    border-bottom-right-radius: 1px;
+    animation: span2 2s linear infinite;
+    animation-delay: 2s;
+}
+@keyframes span2{
+    0%{
+        top:-70px;
+    }
+    100%{
+        top:70px;
+    }
+}
+button span:nth-child(3){
+    height:3px;
+    width:200px;
+    right:-200px;
+    bottom: 0px;
+    background: linear-gradient(to left, rgba(0,0,0,0), #f6e58d);
+    border-top-left-radius: 1px;
+    border-bottom-left-radius: 1px;
+    animation: span3 2s linear infinite;
+    animation-delay: 3s;
+}
+@keyframes span3{
+    0%{
+        right:-200px;
+    }
+    100%{
+        right: 200px;
+    }
+}
+
+button span:nth-child(4){
+    height:70px;
+    width:3px;
+    bottom:-70px;
+    left:0px;
+    background: linear-gradient(to top, rgb(184, 134, 11), #B8860B);
+    border-top-right-radius: 1px;
+    border-top-left-radius: 1px;
+    animation: span4 2s linear infinite;
+    animation-delay: 4s;
+}
+@keyframes span4{
+    0%{
+        bottom: -70px;
+    }
+    100%{
+        bottom:70px;
+    }
+}
+
+button:hover{
+    transition: all .5s;
+    transform: rotate(-3deg) scale(1.1);
+    box-shadow: 0px 3px 5px rgb(210, 105, 30);
+}
+button:hover span{
+    animation-play-state: paused;
+}
+
+#seventh>button{
+  border:1px solid rgb(102, 205, 170);
+  transition:all .5s ease-in-out;
+}
+
+#seventh:hover button{
+  border:1px solid white;
+  font-size:20px;
 }

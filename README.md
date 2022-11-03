@@ -1,8 +1,8 @@
-# Your Topic Here
+# Tourism in Florida
 
-Add a few sentences that explain your project.
+A place to get informed on tourist sites in Florida state.
 
-## Who worked on this project?
+## A Checklist of places and activities to be completed
 ->
 ->
 ->
