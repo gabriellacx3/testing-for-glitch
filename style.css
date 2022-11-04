@@ -13,7 +13,8 @@ html {
 /* adjust typography defaults */
 body {
   margin: 0;
-  font-family: sans-serif;
+  font-family: serif;
+  font-size: 20px;
 }
 
 /* images and videos max out at full width */
@@ -37,7 +38,9 @@ video {
 }
 
 i:hover {
-  /* add your own hover effect */
+   background: #63c6f0;
+  font-size: 30px;
+  border-radius: 20px;
 }
 
 .left {
@@ -49,9 +52,26 @@ i:hover {
 }
 
 h1 {
+  background: #ECD444;
+  font-size: 50px;
+  padding: 10px;
+  font-family: "Luckiest Guy", cursive;
   text-align: center;
+  animation-duration: 2.5s;
+  animation-name: slidein;
 }
 
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
 /* every element with this class takes up the full 
 width and height of the screen */
 .full-screen {
@@ -73,109 +93,34 @@ width and height of the screen */
 }
 
 #slide-1 {
-  background: #A9FFF7;
+  background: rgb(99,198,240);
+background: linear-gradient(0deg, rgba(99,198,240,1) 0%, rgba(240,235,99,1) 47%, rgba(255,255,255,1) 100%);
+  padding: 50px;
+  margin; 50px;
+  font-size: 20px;
 }
 
 #slide-2 {
-  background:#94FBAB;
+background: rgb(99,198,240);
+background: linear-gradient(0deg, rgba(99,198,240,1) 0%, rgba(240,235,99,1) 47%, rgba(255,255,255,1) 100%);
 }
 
 #slide-3 {
-  background:#B8E1FF;
-}
-
-*:before,
-*:after{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+background: rgb(99,198,240);
+background: linear-gradient(0deg, rgba(99,198,240,1) 0%, rgba(240,235,99,1) 47%, rgba(255,255,255,1) 100%);
 }
 
 body{
     height: 100vh;
-    background: #066acd;
-}
-.container{
-    width: 40%;
-    top: 50%;
-    left: 50%;
-    background: white;
-    border-radius: 10px;
-    min-width: 450px;
-    position: absolute;
-    min-height: 100px;
-    transform: translate(-50%,-50%);
-}
-
-#newtask{
-    position: relative;
-    padding: 30px 20px;
-}
-
-#newtask input{
-    width: 75%;
-    height: 45px;
-    padding: 12px;
-    color: #111111;
-    font-weight: 500;
-    position: relative;
-    border-radius: 5px;
-    font-family: 'Poppins',sans-serif;
-    font-size: 15px;
-    border: 2px solid #d1d3d4;
-}
-
-#newtask input:focus{
-    outline: none;
-    border-color: #0d75ec;
-}
-
-#newtask button{
-    position: relative;
-    float: right;
-    font-weight: 500;
-    font-size: 16px;
-    background-color: #0d75ec;
-    border: none;
-    color: #ffffff;
-    cursor: pointer;
-    outline: none;
-    width: 20%;
-    height: 45px;
-    border-radius: 5px;
-    font-family: 'Poppins',sans-serif;
-}
-#tasks{
-    border-radius: 10px;
-    width: 100%;
-    position: relative;
-    background-color: #ffffff;
-    padding: 30px 20px;
-    margin-top: 10px;
-}
-
-.task{
-    border-radius: 5px;
-    align-items: center;
-    justify-content: space-between;
-    border: 1px solid #939697;
-    cursor: pointer;
-    background-color: #c5e1e6;
-    height: 50px;
-    margin-bottom: 8px;
-    padding: 5px 10px;
-    display: flex;
-}
-
-.task span{
-    font-family: 'Poppins',sans-serif;
-    font-size: 15px;
-    font-weight: 400;
+background: rgb(99,198,240);
+background: linear-gradient(90deg, rgba(99,198,240,1) 0%, rgba(255,245,67,1) 53%, rgba(99,198,240,1) 100%);
+  margin: 30px;
+  padding: 10px;
 }
 
 .task button{
-    background-color:#14110F ;
-    color: #D9C5B2;
+    background-color: #6583e5;
+    color: #ffffff;
     border: none;
     cursor: pointer;
     outline: none;
@@ -197,10 +142,12 @@ button{
     outline: none;
     cursor: pointer;
     position: relative;
-    padding: 0px;
     overflow: hidden;
     transition: all .5s;
     box-shadow: 0px 1px 2px rgba(0,0,0,.2);
+   margin: 10px;
+    padding; 10px;
+ 
 }
 button span{
     position: absolute;
@@ -304,4 +251,40 @@ button:hover span{
   font-size:20px;
 }
 
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+h2 {
+  font-family: 'Bangers', cursive;
+  font-size:50px;
+  text-align: center;
+  padding: 10px;
+  color: #F7A278
+}
+
+#checklist {
+  position: relative;
+  top:0;
+  bottom:0;
+  width:200px;
+  padding: 25px;
+  background: blue;
+}
+
+.hidden-checklist {
+  width: 0px;
+  overflow: hidden;
+  padding: 0;
+}
 
