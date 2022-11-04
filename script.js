@@ -18,29 +18,17 @@ const returnContent = () => {
   counter--;
    }
 };
-
-document.querySelector('#push').onclick = function(){
-    if(document.querySelector('#newtask input').value.length == 0){
-        alert("Kindly Enter Task Name!!!!")
-    }
-
-    else{
-        document.querySelector('#tasks').innerHTML += `
-            <div class="task">
-                <span id="taskname">
-                    ${document.querySelector('#newtask input').value}
-                </span>
-                <button class="delete">
-                    <i class="far fa-trash-alt"></i>
-                </button>
-            </div>
-        `;
-
-        var current_tasks = document.querySelectorAll(".delete");
-        for(var i=0; i<current_tasks.length; i++){
-            current_tasks[i].onclick = function(){
-                this.parentNode.remove();
-            }
-        }
-    }
+       
+const toggleChecklist = () => {
+  let myChecklist = document.querySelector("#checklist");
+  myChecklist.classList.toggle("hidden");
+  
+  if (myChecklist.classList.contains("hidden")) {
+    toggleButton.innerHTML = "Open Checklist";
+  } else {
+    toggleButton.innerHTML = "Close Checklist";
+  }
+   
+  let toggleButton = document.querySelector("#toggle-checklist");
+  toggleButton.innerHTML = "Close Checklist";
 }
