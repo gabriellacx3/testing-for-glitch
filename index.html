@@ -10,34 +10,88 @@
     <!-- import bootstrap icons -->
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+      href= "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
     />
 
     <!-- import the webpage's stylesheet -->
     <link rel="stylesheet" href="style.css" />
     
+     <!-- import html2canvas library to our tourist website -->
+    <script
+      src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"
+      defer
+    ></script>
+    
     <script src="script.js" defer></script>
     
+    <!-- links for New Google Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
     
   </head>
   <body>
     <!-- this is the start of content -->
     <h1>Florida Tourism</h1>
+    
+    <div>
+      <button id="toggle-checklist" onclick="toggleChecklist()">
+        Activities Checklist
+      </button>
+    </div>
+    
     <div class="content-container">
       
     <!-- three placeholder sections of content -->
     <section class="full-screen" id="slide-1">
       <p>
-        Home Page!
-      </p>
-    </section>
-    
-    <section class="full-screen hidden" id="slide-2">
-      <p>
-        First Tourist Spot!
+       Have you ever thought about visitng Florida? Florida is one of the best places for tourism. Travel for pleasure is evoked in every contemporary image of the state. The tourist who arrives in the official Florida attire of a straw hat, shorts, and sandals is in for the sun, water, and thrill rides. While you have fun, it is also important that you are mindful of being a responsible tourist by being respectful of the people and nature around you.
       </p>
       
-      <a href="second-touristSpot.html">
+<div class="row">
+  <div class="column">
+      <img src="https://cdn.glitch.global/da713c21-71b1-4cea-92a9-291e0c929d3c/beach%20in%20fla.jpg?v=1667449348317" alt="Beach located in Florida" style="width:100%">
+      </div>
+    
+        <div class="column">
+      <img src="https://cdn.glitch.global/da713c21-71b1-4cea-92a9-291e0c929d3c/florida%20map.jpg?v=1667449358826" alt="Map of Florida Tourist destinations" style="width:100%">
+       </div>
+           
+         <div class="column">
+      <img src="https://cdn.glitch.global/da713c21-71b1-4cea-92a9-291e0c929d3c/finally%20a%20lighthouse%20AND.jpg?v=1667450204600" alt="Lighthouse located in Florida" style="width:100%">
+      </div>
+     </div>
+      
+    </section>
+    
+   <section class="full-screen hidden" id="slide-2">
+      
+      
+      
+      <p>
+        PANAMA CITY BEACH, has many attractions that make your visit much more than just a beach and just an ocean vacation. There are boardwalks with games and food eateries, theme parks, and some truly awesome fun times for families.
+      </p>
+      
+      <ol>
+  <li>Go diving amongst shipwrecks located a short while from the sands of Panama City Beach. There are dozens of wrecks and artificial reefs waiting for divers. This has quickly put Panama city on the list of top dive sites in Florida state.  </li>
+  <li>Visit Pier Park, an entertainment center for the whole family with fun activities, shops, and restaurants</li>
+  <li>Visit the coastal shores of Helen State Park. This historic site offers plenty adventurous oppurtunities for kayakers, fishers, and many more.</li>
+</ol>
+      
+      <div class="row">
+  <div class="column">
+    <img src="https://cdn.glitch.global/e8760089-f147-434c-bc52-af5f9ece7d56/pier-park%20panama%20city!.jpg?v=1667537029333">
+        </div>
+    
+        <div class="column">
+    <img src="https://cdn.glitch.global/e8760089-f147-434c-bc52-af5f9ece7d56/Panama-City-Beach-Welcome-Sign-640x425-1.jpg?v=1667537017158">
+        </div>
+          
+        <div class="column">
+          <img src="https://cdn.glitch.global/e8760089-f147-434c-bc52-af5f9ece7d56/ferris%20wheel%20in%20panama%20city%20at%20evening%20time.jpg?v=1667536988969">
+  </div>
+</div>
+        <a href="second-touristSpot.html">
    <div id="seventh" class="buttonBox">
     <button>Click for New Tourist Spot or Move Forward</button>
      
@@ -45,25 +99,89 @@
       
     </section>
     
-    <section class="full-screen hidden" id="slide-3">
-      <p>
-        Second Tourist Spot!
+      <section class="full-screen hidden" id="slide-3">
+        
+  
+       <p>
+        THE FLORIDA KEYS, one of the most ideal tourist destinations in the state of Florida. Consisting of Key Largo, Islamorada, Key West, and many more keys in between. The Florida Keys are filled with wildlife, scattered beaches, beautiful resorts, and plenty of water adventure opportunities, including diving and swimming with the dolphins. Tourists will discover a vast amount of history here. From the Hemingway House to a  vibrant art scene, there is a little something for everyone who plans to visit the Florida Keys. 
       </p>
- 
+      
+      <div class="row">
+  <div class="column">
+    <img src="https://cdn.glitch.global/08ad22de-2229-4a52-b384-771da6bcf36f/fla%20keys%20beach.jpg?v=1667495594190">
+        </div>
+    
+        <div class="column">
+    <img src="https://cdn.glitch.global/08ad22de-2229-4a52-b384-771da6bcf36f/fla%20project%201.jpg?v=1667495586317">
+        </div>
+          
+        <div class="column">
+          <img src="https://cdn.glitch.global/08ad22de-2229-4a52-b384-771da6bcf36f/manatee.jpg?v=1667495624757">
+  </div>
+</div>
+      
+      <p>
+      Above and Below, you will find images and a list of activities that define the Florida Keys based on nature, wildlife, food, and some of the numerous attractions of this part of the State. But be careful. Manatees are slow-moving and therefore unable to swim quickly away from boats; this often results in collisions that may cause injury or death to the creatures. In areas that are known manatee habitats, boaters should slow down and produce only minimal wake.
+      </p>
+      
+      <ol>
+  <li>Go look at Sea Turles at The Turtle Hospital in Marathon </li>
+  <li>Go to the Key Lime Pie Bakery in Key West</li>
+  <li>Visit the house of Ernest Hemingway in Key West that is now a museum and home to many cats</li>
+</ol>
+      
+      <div class="row">
+  <div class="column">
+    <img src="https://cdn.glitch.global/08ad22de-2229-4a52-b384-771da6bcf36f/Key-Lime-Pie.jpg?v=1667495616863">
+    </div>
+    
+        <div class="column">
+    <img src="https://cdn.glitch.global/08ad22de-2229-4a52-b384-771da6bcf36f/fla%20keys%20highway.jpg?v=1667495598411">
+        </div>
+          
+        <div class="column">
+          <img src="https://cdn.glitch.global/08ad22de-2229-4a52-b384-771da6bcf36f/hemingway%20cats.jpg?v=1667495610063">
+  </div>
+        </div>
+        
         <a href="fourth-touristSpot.html">
    <div id="seventh" class="buttonBox">
     <button>Click for New Tourist Spot or Go Backward</button>
      
     </div></a>
-      
+        
 </section>
-      
-      
     
   
     
-    <i class="bi bi-arrow-left-square left" onclick="returnContent()"></i>
-    <i class="bi bi-arrow-right-square right" onclick="advanceContent()"></i>
+    <i class="bi bi-arrow-left-circle left" onclick="returnContent()"></i>
+    <i class="bi bi-arrow-right-circle right" onclick="advanceContent()"></i>
+      
+       <div class="checklist-container">
+      <section id="checklist" class="hidden">
+        <h3>Checklist of Places</h3>
+        <p>Places I want to visit...</p>
+        <div>
+          <input type="checkbox" name="input1" />
+          <label for="input1">PANAMA CITY BEACH</label>
+        </div>
+
+        <div>
+          <input type="checkbox" name="input2" />
+          <label for="input2">ORLANDO</label>
+        </div>
+        
+        <div>
+          <input type="checkbox" name="input3" />
+          <label for="input3">THE FLORIDA KEYS</label>
+        </div>
+        
+        <div>
+          <input type="checkbox" name="input4" />
+          <label for="input4">MIAMI</label>
+        </div>
+        
+      </section>
     
     </div>
   </body>
