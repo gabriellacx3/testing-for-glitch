@@ -4,7 +4,7 @@
 let counter = 1;
 
 const advanceContent = () => {
-  if (counter < 3) {
+  if (counter < 5) {
   counter++;
   let idToSelect = "#slide-" + counter;
   document.querySelector(idToSelect).classList.remove("hidden");
