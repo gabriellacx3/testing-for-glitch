@@ -110,6 +110,16 @@ background: rgb(99,198,240);
 background: linear-gradient(0deg, rgba(99,198,240,1) 0%, rgba(240,235,99,1) 47%, rgba(255,255,255,1) 100%);
 }
 
+#slide-4 {
+background: rgb(99,198,240);
+background: linear-gradient(0deg, rgba(99,198,240,1) 0%, rgba(240,235,99,1) 47%, rgba(255,255,255,1) 100%);
+}
+
+#slide-5 {
+background: rgb(99,198,240);
+background: linear-gradient(0deg, rgba(99,198,240,1) 0%, rgba(240,235,99,1) 47%, rgba(255,255,255,1) 100%);
+}
+
 body{
     height: 100vh;
 background: rgb(99,198,240);
