@@ -25,7 +25,7 @@ video {
 }
 
 .content-container {
-  position: absolute;
+  position: relative;
 }
 
 .content-container i {
@@ -38,17 +38,17 @@ video {
 }
 
 i:hover {
-   background: #63c6f0;
+   background: #ffffff;
   font-size: 30px;
-  border-radius: 20px;
+  border-radius: 22px;
 }
 
 .left {
-  left: 10px
+  left: 10px;
 }
 
 .right {
-  right: 10px
+  right: 10px;
 }
 
 h1 {
@@ -96,7 +96,7 @@ width and height of the screen */
   background: rgb(99,198,240);
 background: linear-gradient(0deg, rgba(99,198,240,1) 0%, rgba(240,235,99,1) 47%, rgba(255,255,255,1) 100%);
   padding: 50px;
-  margin; 50px;
+  margin: 0px;
   font-size: 20px;
 }
 
@@ -140,6 +140,7 @@ background: linear-gradient(90deg, rgba(99,198,240,1) 0%, rgba(255,245,67,1) 53%
 }
 
 button{
+  display: block;
     width:200px;
     height:70px;
     background: linear-gradient(to left top, #0C0504 50%, #0C0504 50%);
@@ -155,10 +156,10 @@ button{
     overflow: hidden;
     transition: all .5s;
     box-shadow: 0px 1px 2px rgba(0,0,0,.2);
-   margin: 10px;
-    padding; 10px;
- 
+    margin: 30px;
+    padding: 10px;
 }
+
 button span{
     position: absolute;
     display: block;
@@ -283,18 +284,19 @@ h2 {
   color: #F7A278
 }
 
-#checklist {
-  position: relative;
+#content {
+  position: absolute;
   top:0;
+  right:0;
+  left:0;
   bottom:0;
   width:200px;
   padding: 25px;
-  background: blue;
+  background:#f0eb63;
 }
 
-.hidden-checklist {
+.hidden-content {
   width: 0px;
   overflow: hidden;
   padding: 0;
 }
-
